@@ -2,7 +2,7 @@
 <html lang="en-US">
 <html>
  <head>
-   <title>Discuss&Connect Documentation</title>
+   <title>Discuss&Connect Home</title>
    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png">
  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -42,14 +42,12 @@
 
        </a>
        <!-- User Information Dropdown -->
-       <a href="..//index.html" aria-label="Home"  class="active">Home</a>
-       <a href="..//websites/index.html" aria-label="View my website design projects">Websites</a>
-       <a href="index.html" aria-label="View my poster design projects">Posters</a>
-       <a href="..//videos/index.html" aria-label="View my video projects">Videos</a>
-       <a href="..//books/index.html" aria-label="View my book design projects">Books</a>
-       <a href="..//about/index.html" aria-label="Learn more about me">About</a>
-       <a href="..//contact/index.html" aria-label="Contact me">Contact</a>
-       <a href="..//resume/index.html" aria-label="View my resume">Resume</a>
+       <a href="index.html" aria-label="Home"  class="active">Home</a>
+       <a href="research/index.html" aria-label="View the research">Research</a>
+       <a href="mockups/index.html" aria-label="View the mockups">Mockups</a>
+       <a href="website/index.html" aria-label="View the website">Website</a>
+       <a href="about/index.html" aria-label="Learn more about the project">About</a>
+
 
 
 
@@ -73,3 +71,905 @@
      </div>
      <!-- Moved searchResults outside the topnav -->
      <div id="searchResults2" class="search-results2"></div>
+
+     <footer>
+         <div class="footer-content">
+             <div class="footer-section">
+                 <h4>Contact Us</h4>
+                 <p>Email: brekd816@dorman-designs.com</p>
+
+
+                 <p>© 2024 Discuss&Connect. All rights reserved.</p>
+             </div>
+         </div>
+     </footer>
+
+
+          <script>
+          document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+        </script>
+
+
+
+
+
+            <script>
+              document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.body.classList.toggle('sidebar-visible');
+            });
+
+            </script>
+
+
+
+
+
+
+
+
+            <script>
+                function toggleDropdown() {
+                    var dropdownContent = document.getElementById("dropdownContent");
+                    dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+                }
+            </script>
+
+
+
+
+
+
+            <script>
+
+                function search() {
+                    var searchInput = document.getElementById("searchInput").value;
+                    var searchResults = document.getElementById("searchResults");
+
+                    // Implement your search functionality here
+                    // For simplicity, I'm just showing and hiding the search-results div in this example
+                    if (searchInput.trim() !== "") {
+                        searchResults.style.display = "block";
+                        searchResults.innerHTML = "Search results for: " + searchInput;
+                    } else {
+                        searchResults.style.display = "none";
+                    }
+                }
+            </script>
+
+
+
+
+
+        <!-- JavaScript -->
+
+        <script>
+        // Get the toggle button by its ID
+        const toggleBtn = document.getElementById('toggleTextToSpeech');
+
+        // Function to read the selected text
+        function speakSelectedText() {
+          if ('speechSynthesis' in window) {
+            // First, stop any ongoing speech
+            window.speechSynthesis.cancel();
+
+            // Get the user's selected text
+            const selectedText = window.getSelection().toString();
+
+            // Check if there is any text selected
+            if (selectedText.length > 0) {
+              // Create a new speech synthesis utterance instance with the selected text
+              const utterance = new SpeechSynthesisUtterance(selectedText);
+
+              // Optionally, customize the utterance properties
+              utterance.rate = 1; // Speed of speech
+              utterance.pitch = 1; // Pitch of speech
+              utterance.volume = 1; // Volume
+
+              // Speak the utterance
+              window.speechSynthesis.speak(utterance);
+            } else {
+              // Optional: Provide feedback when no text is selected
+              alert("Please select some text to read aloud.");
+            }
+          } else {
+            alert("Sorry, your browser doesn't support text to speech!");
+          }
+        }
+
+        // Function to stop speech synthesis
+        function stopSpeaking() {
+          if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+          }
+        }
+
+        // Enhance the button to toggle speech synthesis
+        toggleBtn.addEventListener('click', () => {
+          if (window.speechSynthesis.speaking) {
+            stopSpeaking();
+            toggleBtn.textContent = 'Read Selected Text'; // Reset button text
+          } else {
+            speakSelectedText();
+            // Optional: Change button text to indicate speech is active
+            // Note: This text won't revert automatically when speech ends
+            toggleBtn.textContent = 'Stop Reading';
+          }
+        });
+
+        </script>
+
+
+
+
+
+
+
+        <script>
+          function applyGreenRedFilter() {
+             document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(120deg)";
+           }
+
+           function applyBlueYellowFilter() {
+             document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(240deg)";
+           }
+           function applyRedFilter() {
+              document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(0deg)";
+            }
+
+        </script>
+
+        <script>
+          // Function to adjust font size (similar to the previous example)
+          function adjustFontSize(action) {
+              var currentSize = parseFloat(document.body.style.fontSize) || 16;
+
+              var newSize;
+              if (action === 'increase') {
+                  newSize = currentSize * 1.2;
+              } else if (action === 'decrease') {
+                  newSize = currentSize / 1.2;
+              }
+
+              document.body.style.fontSize = newSize + 'px';
+          }
+        </script>
+
+        <script>
+          function adjustFontSize(factor) {
+            // Adjust the font size of the body
+            var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+            var newFontSize = currentFontSize * factor;
+            document.body.style.fontSize = newFontSize + 'px';
+
+            // Adjust the font size of links (a elements)
+            var links = document.querySelectorAll('a');
+            links.forEach(function(link) {
+                var currentLinkSize = parseFloat(window.getComputedStyle(link, null).getPropertyValue('font-size'));
+                var newLinkSize = currentLinkSize * factor;
+                link.style.fontSize = newLinkSize + 'px';
+            });
+        }
+
+        function increaseFont() {
+            adjustFontSize(1.1); // Increase font size by 10%
+        }
+
+        function decreaseFont() {
+            adjustFontSize(0.9); // Decrease font size by 10%
+        }
+        </script>
+
+          <script>
+            function decreaseFont() {
+                // Decrease the font size
+                var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+                var newFontSize = currentFontSize * 0.9; // Adjust the multiplication factor as needed
+                document.body.style.fontSize = newFontSize + 'px';
+
+                // Adjust the sidebar size
+                var sidebar = document.querySelector('.sidebar');
+                var currentSidebarWidth = parseFloat(window.getComputedStyle(sidebar, null).getPropertyValue('width'));
+                var newSidebarWidth = currentSidebarWidth * 0.9; // Adjust the multiplication factor as needed
+                sidebar.style.width = newSidebarWidth + 'px';
+
+                // Adjust other elements inside the sidebar if needed
+                var links = document.querySelectorAll('.sidebar a');
+                links.forEach(function(link) {
+                    var currentLinkSize = parseFloat(window.getComputedStyle(link, null).getPropertyValue('font-size'));
+                    var newLinkSize = currentLinkSize * 0.9; // Adjust the multiplication factor as needed
+                    link.style.fontSize = newLinkSize + 'px';
+                });
+
+                // Adjust the top position of the sidebar to maintain its top position
+                var topnavHeight = document.querySelector('.topnav').offsetHeight;
+                sidebar.style.top = topnavHeight + 'px';
+            }
+
+        </script>
+        <script>
+
+          function applyRedFilter() {
+            document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(0deg)";
+          }
+
+          function applyGreenRedFilter() {
+            document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(120deg)";
+          }
+
+          function applyBlueYellowFilter() {
+            document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(180deg)";
+          }
+          function applyHueRotate() {
+           document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(45deg)"; // Set your desired hue-rotate value
+         }
+
+         function applySepia() {
+           document.body.style.filter = "sepia(80%) saturate(100%) hue-rotate(0deg)"; // Set your desired sepia value
+         }
+        </script>
+
+
+
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var searchInput = document.querySelector('.sidebar input[type="text"]');
+                var gameListContainer = document.querySelector('.sidebar #game-list2');
+
+                // Get all game links in the game list with data-game attribute
+                var gameLinks = Array.from(document.querySelectorAll('.sidebar #game-list2 [data-game]'));
+
+                searchInput.addEventListener('input', function () {
+                    var searchTerm = this.value.toLowerCase();
+
+                    // Filter game links based on an exact match with the data-game attribute
+                    var filteredGames = gameLinks.filter(function (gameLink) {
+                        return gameLink.getAttribute('data-game').toLowerCase().includes(searchTerm);
+                    });
+
+                    // Update game list based on the exact match with the data-game attribute
+                    gameListContainer.innerHTML = '';
+                    filteredGames.forEach(function (gameLink) {
+                        var clonedLink = gameLink.cloneNode(true);
+                        gameListContainer.appendChild(clonedLink);
+                    });
+                });
+            });
+
+              function adjustFontSize(factor) {
+                // Adjust the font size of the body
+                var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+                var newFontSize = currentFontSize * factor;
+                document.body.style.fontSize = newFontSize + 'px';
+
+                // Adjust the font size of the h1 element
+                var h1Element = document.querySelector('h3');
+                var currentH1Size = parseFloat(window.getComputedStyle(h1Element, null).getPropertyValue('font-size'));
+                var newH1Size = currentH1Size * factor;
+                h1Element.style.fontSize = newH1Size + 'px';
+            }
+
+            function increaseFont() {
+                adjustFontSize(1.1); // Increase font size by 10%
+            }
+
+            function decreaseFont() {
+                adjustFontSize(0.9); // Decrease font size by 10%
+            }
+
+        </script>
+
+            <script>
+            // Get the toggle button by its ID
+            const toggleBtn = document.getElementById('toggleTextToSpeech');
+
+            // Function to read the selected text
+            function speakSelectedText() {
+              if ('speechSynthesis' in window) {
+                // First, stop any ongoing speech
+                window.speechSynthesis.cancel();
+
+                // Get the user's selected text
+                const selectedText = window.getSelection().toString();
+
+                // Check if there is any text selected
+                if (selectedText.length > 0) {
+                  // Create a new speech synthesis utterance instance with the selected text
+                  const utterance = new SpeechSynthesisUtterance(selectedText);
+
+                  // Optionally, customize the utterance properties
+                  utterance.rate = 1; // Speed of speech
+                  utterance.pitch = 1; // Pitch of speech
+                  utterance.volume = 1; // Volume
+
+                  // Speak the utterance
+                  window.speechSynthesis.speak(utterance);
+                } else {
+                  // Optional: Provide feedback when no text is selected
+                  alert("Please select some text to read aloud.");
+                }
+              } else {
+                alert("Sorry, your browser doesn't support text to speech!");
+              }
+            }
+
+            // Function to stop speech synthesis
+            function stopSpeaking() {
+              if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+              }
+            }
+
+            // Enhance the button to toggle speech synthesis
+            toggleBtn.addEventListener('click', () => {
+              if (window.speechSynthesis.speaking) {
+                stopSpeaking();
+                toggleBtn.textContent = 'Read Selected Text'; // Reset button text
+              } else {
+                speakSelectedText();
+                // Optional: Change button text to indicate speech is active
+                // Note: This text won't revert automatically when speech ends
+                toggleBtn.textContent = 'Stop Reading';
+              }
+            });
+
+            </script>
+
+        <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        <script>
+        document.getElementById('filterCheckbox').addEventListener('change', function() {
+            var filterOptionsDiv = document.getElementById('filterOptions');
+            if (this.checked) {
+                filterOptionsDiv.style.display = 'block';
+            } else {
+                filterOptionsDiv.style.display = 'none';
+            }
+        });
+        </script>
+
+
+
+
+
+
+        <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            var userInfo = document.querySelector(".user-info"); // Select the .user-info container
+            var dropdown = document.querySelector(".dropdown"); // Assuming you also want to select and hide .dropdown
+
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                // Hide .user-info in responsive mode
+                if (userInfo) userInfo.style.display = "none";
+                // Hide .dropdown in responsive mode, if it exists
+                if (dropdown) dropdown.style.display = "none";
+            } else {
+                x.className = "topnav";
+                // Show .user-info when not in responsive mode
+                if (userInfo) userInfo.style.display = "";
+                // Show .dropdown when not in responsive mode, if it exists
+                if (dropdown) dropdown.style.display = "";
+            }
+        }
+        </script>
+
+
+
+
+
+
+
+
+        <script>
+        function toggleFocusHighlight() {
+          var styleElement = document.getElementById('focus-highlight-style');
+
+          if (styleElement) {
+            // If the style element exists, remove it to disable focus highlight
+            styleElement.remove();
+          } else {
+            // Create a new style element to add focus highlight styles
+            styleElement = document.createElement('style');
+            styleElement.id = 'focus-highlight-style';
+            styleElement.innerText = `:focus { outline: 2px solid yellow; }`; // Customize as needed
+            document.head.appendChild(styleElement);
+          }
+        }
+        </script>
+
+        <script>
+        document.getElementById('speakSelectedText').addEventListener('click', function() {
+            // Get selected text
+            var text = getSelectedText();
+            if (text) {
+                speakText(text);
+            } else {
+                console.log('No text selected.');
+            }
+        });
+
+        function getSelectedText() {
+            var text = '';
+            if (typeof window.getSelection != "undefined") {
+                text = window.getSelection().toString();
+            } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
+                text = document.selection.createRange().text;
+            }
+            return text;
+        }
+
+        function speakText(textToSpeak) {
+            if ('speechSynthesis' in window) {
+                const msg = new SpeechSynthesisUtterance();
+                msg.text = textToSpeak;
+                window.speechSynthesis.speak(msg);
+            } else {
+                console.log('Text-to-Speech not supported.');
+            }
+        }
+        </script>
+
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stopButton = document.getElementById('stopButton');
+            stopButton.addEventListener('click', function() {
+                if ('speechSynthesis' in window) {
+                    speechSynthesis.cancel();
+                }
+            });
+        });
+        </script>
+
+
+
+
+
+
+        <script>
+          function toggleDropdown() {
+            const dropdown = document.querySelector('.dropdown-content2');
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Optional: Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.user-icon img')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content2");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+        </script>
+
+        <script>
+        function toggleDropdown2() {
+            // Select the dropdown menu
+            var dropdown = document.querySelector('.dropdown-content2');
+            // Toggle the display property
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "block";
+            } else {
+                dropdown.style.display = "none";
+            }
+        }
+
+        // Optional: Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.user-icon, .user-icon img, .user-icon i')) {
+                var dropdowns = document.querySelectorAll(".dropdown-content2");
+                dropdowns.forEach(function(dropdown) {
+                    if (dropdown.style.display === "block") {
+                        dropdown.style.display = "none";
+                    }
+                });
+            }
+        }
+        </script>
+
+
+        <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+
+            // Get all elements with the 'dropdown-content' class within the topnav
+            var dropdowns = x.getElementsByClassName("dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+                // If the topnav is in responsive mode, ensure dropdown-content remains hidden
+                if (x.className.includes("responsive")) {
+                    dropdowns[i].style.display = "none";
+                } else {
+                    // Reset style in case it was previously modified
+                    dropdowns[i].style.display = "";
+                }
+            }
+        }
+
+        // This part is to ensure the dropdown content does not display in responsive mode
+        // You may need to add an event listener or modify existing ones for dropdown buttons
+        // to control their display property separately if they should be visible in responsive mode.
+
+        </script>
+
+
+        <script>
+        function updateNavigationForLoggedInUser(userName, profileImagePath) {
+          const profileSection = document.querySelector('.profile-section');
+          profileSection.querySelector('.profile-name').textContent = userName;
+          profileSection.querySelector('.profile-icon').src = profileImagePath;
+
+          // Hide the login and signup links
+          document.querySelector('a[href="login/index.html"]').style.display = 'none';
+          document.querySelector('a[href="..//signup/index.html"]').style.display = 'none';
+
+          // Show the profile section
+          profileSection.style.display = 'flex';
+        }
+        </script>
+
+        <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            var userIcon = document.querySelector(".user-icon"); // Select the .user-icon
+
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                // Hide the .user-icon when entering responsive mode
+                if (userIcon) userIcon.style.display = "none";
+            } else {
+                x.className = "topnav";
+                // Show the .user-icon when exiting responsive mode
+                if (userIcon) userIcon.style.display = "block";
+            }
+
+            // Get all elements with the 'dropdown-content' class within the topnav
+            var dropdowns = x.getElementsByClassName("dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+                // If the topnav is in responsive mode, ensure dropdown-content remains hidden
+                if (x.className.includes("responsive")) {
+                    dropdowns[i].style.display = "none";
+                } else {
+                    // Reset style in case it was previously modified
+                    dropdowns[i].style.display = "";
+                }
+            }
+        }
+        </script>
+
+
+
+
+        <script>
+        function toggleFocusHighlight() {
+          var styleElement = document.getElementById('focus-highlight-style');
+
+          if (styleElement) {
+            // If the style element exists, remove it to disable focus highlight
+            styleElement.remove();
+          } else {
+            // Create a new style element to add focus highlight styles
+            styleElement = document.createElement('style');
+            styleElement.id = 'focus-highlight-style';
+            styleElement.innerText = `:focus { outline: 2px solid yellow; }`; // Customize as needed
+            document.head.appendChild(styleElement);
+          }
+        }
+        </script>
+
+        <script>
+        document.getElementById('speakSelectedText').addEventListener('click', function() {
+            // Get selected text
+            var text = getSelectedText();
+            if (text) {
+                speakText(text);
+            } else {
+                console.log('No text selected.');
+            }
+        });
+
+        function getSelectedText() {
+            var text = '';
+            if (typeof window.getSelection != "undefined") {
+                text = window.getSelection().toString();
+            } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
+                text = document.selection.createRange().text;
+            }
+            return text;
+        }
+
+        function speakText(textToSpeak) {
+            if ('speechSynthesis' in window) {
+                const msg = new SpeechSynthesisUtterance();
+                msg.text = textToSpeak;
+                window.speechSynthesis.speak(msg);
+            } else {
+                console.log('Text-to-Speech not supported.');
+            }
+        }
+        </script>
+
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stopButton = document.getElementById('stopButton');
+            stopButton.addEventListener('click', function() {
+                if ('speechSynthesis' in window) {
+                    speechSynthesis.cancel();
+                }
+            });
+        });
+        </script>
+
+
+
+        <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            var userIcon = document.querySelector(".user-icon"); // Select the .user-icon
+
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                // Hide the .user-icon when entering responsive mode
+                if (userIcon) userIcon.style.display = "none";
+            } else {
+                x.className = "topnav";
+                // Show the .user-icon when exiting responsive mode
+                if (userIcon) userIcon.style.display = "block";
+            }
+
+            // Get all elements with the 'dropdown-content' class within the topnav
+            var dropdowns = x.getElementsByClassName("dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+                // If the topnav is in responsive mode, ensure dropdown-content remains hidden
+                if (x.className.includes("responsive")) {
+                    dropdowns[i].style.display = "none";
+                } else {
+                    // Reset style in case it was previously modified
+                    dropdowns[i].style.display = "";
+                }
+            }
+        }
+        </script>
+
+
+
+
+
+        <script>
+        function toggleFocusHighlight() {
+          var styleElement = document.getElementById('focus-highlight-style');
+
+          if (styleElement) {
+            // If the style element exists, remove it to disable focus highlight
+            styleElement.remove();
+          } else {
+            // Create a new style element to add focus highlight styles
+            styleElement = document.createElement('style');
+            styleElement.id = 'focus-highlight-style';
+            styleElement.innerText = `:focus { outline: 2px solid yellow; }`; // Customize as needed
+            document.head.appendChild(styleElement);
+          }
+        }
+        </script>
+
+        <script>
+        document.getElementById('speakSelectedText').addEventListener('click', function() {
+            // Get selected text
+            var text = getSelectedText();
+            if (text) {
+                speakText(text);
+            } else {
+                console.log('No text selected.');
+            }
+        });
+
+        function getSelectedText() {
+            var text = '';
+            if (typeof window.getSelection != "undefined") {
+                text = window.getSelection().toString();
+            } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
+                text = document.selection.createRange().text;
+            }
+            return text;
+        }
+
+        function speakText(textToSpeak) {
+            if ('speechSynthesis' in window) {
+                const msg = new SpeechSynthesisUtterance();
+                msg.text = textToSpeak;
+                window.speechSynthesis.speak(msg);
+            } else {
+                console.log('Text-to-Speech not supported.');
+            }
+        }
+        </script>
+
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stopButton = document.getElementById('stopButton');
+            stopButton.addEventListener('click', function() {
+                if ('speechSynthesis' in window) {
+                    speechSynthesis.cancel();
+                }
+            });
+        });
+        </script>
+
+
+
+        <!-- Heyo This is Important -->
+
+        <script>
+        document.getElementById('speakSelectedText').addEventListener('click', function() {
+            // Get selected text
+            var text = getSelectedText();
+            if (text) {
+                speakText(text);
+            } else {
+                console.log('No text selected.');
+            }
+        });
+
+        function getSelectedText() {
+            var text = '';
+            if (typeof window.getSelection != "undefined") {
+                text = window.getSelection().toString();
+            } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
+                text = document.selection.createRange().text;
+            }
+            return text;
+        }
+
+        function speakText(textToSpeak) {
+            if ('speechSynthesis' in window) {
+                const msg = new SpeechSynthesisUtterance();
+                msg.text = textToSpeak;
+                window.speechSynthesis.speak(msg);
+            } else {
+                console.log('Text-to-Speech not supported.');
+            }
+        }
+        </script>
+
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stopButton = document.getElementById('stopButton');
+            stopButton.addEventListener('click', function() {
+                if ('speechSynthesis' in window) {
+                    speechSynthesis.cancel();
+                }
+            });
+        });
+        </script>
+
+
+
+
+
+
+
+        <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+
+            // Get all elements with the 'dropdown-content' class within the topnav
+            var dropdowns = x.getElementsByClassName("dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+                // If the topnav is in responsive mode, ensure dropdown-content remains hidden
+                if (x.className.includes("responsive")) {
+                    dropdowns[i].style.display = "none";
+                } else {
+                    // Reset style in case it was previously modified
+                    dropdowns[i].style.display = "";
+                }
+            }
+        }
+
+        // This part is to ensure the dropdown content does not display in responsive mode
+        // You may need to add an event listener or modify existing ones for dropdown buttons
+        // to control their display property separately if they should be visible in responsive mode.
+
+        </script>
+
+
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          var searchResults = document.getElementById("searchResults2");
+
+          if (x.className === "topnav") {
+            x.className += " responsive";
+            // Show searchResults2 when opening the menu
+            searchResults.style.display = "block";
+          } else {
+            x.className = "topnav";
+            // Hide searchResults2 when closing the menu
+            searchResults.style.display = "none";
+          }
+        }
+        </script>
+
+
+
+                <script>
+                const searchFunction = () => {
+                    const input = document.getElementById('searchInput2').value.toLowerCase();
+                    const resultsContainer = document.getElementById('searchResults2');
+                    const clearButton = document.getElementById('clearSearch');
+
+                    // Toggle visibility of results container and clear button based on input
+                    if (input) {
+                        resultsContainer.style.display = 'block';
+                        clearButton.style.display = 'inline'; // Show the clear button when there's input
+                    } else {
+                        resultsContainer.style.display = 'none';
+                        clearButton.style.display = 'none'; // Hide the clear button when input is empty
+                    }
+
+                    resultsContainer.innerHTML = ''; // Clear previous results
+
+
+                    const searchData = [
+                        { name: 'About', url: '..//about/index.html' },
+                          { name: 'Book', url: '..//books/index.html' },
+                            { name: 'Contact', url: '..//contact/index.html' },
+                              { name: 'Home', url: '..//index.html' },
+                                { name: 'Posters', url: '..//posters/index.html' },
+                                { name: 'Resume', url: '..//resume/index.html' },
+                                  { name: 'Videos', url: '..//videos/index.html' },
+                                  { name: 'Websites', url: '..//websites/index.html' },
+
+
+                        // Add more results as needed
+                    ];
+
+                    const filteredData = searchData.filter(item => item.name.toLowerCase().includes(input));
+
+                    filteredData.forEach(item => {
+                        const div = document.createElement('div');
+                        const a = document.createElement('a');
+                        a.textContent = item.name;
+                        a.href = item.url;
+
+                        div.appendChild(a);
+                        resultsContainer.appendChild(div);
+                    });
+                };
+
+                const clearSearchFunction = () => {
+                    document.getElementById('searchInput2').value = ''; // Clear input
+                    document.getElementById('searchResults2').innerHTML = ''; // Clear previous results
+                    document.getElementById('searchResults2').style.display = 'none'; // Optionally hide the results container
+                    document.getElementById('clearSearch').style.display = 'none'; // Hide the clear button
+                };
+
+                // Optionally, automatically trigger the search function when the input is cleared
+                document.getElementById('searchInput2').addEventListener('input', searchFunction);
+
+                </script>
+     </body>

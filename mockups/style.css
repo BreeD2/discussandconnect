@@ -6,6 +6,7 @@
 .active {
   background-color:#f8931f;
   color: white;
+
 }
 
 .topnav .icon {
@@ -296,10 +297,10 @@ left:15px;
 }
 
 .search-results2 div {
-  padding: 8px;
-  border-bottom: 1px solid #f8931f;; /* Light line between results */
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+    padding: 8px;
+    border-bottom: 1px solid #f8931f;; /* Light line between results */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 
 
 }
@@ -311,15 +312,12 @@ left:15px;
 .search-results2 a {
     text-decoration: none;
     color: #333; /* Dark grey text */
-    display: block; /* Makes the whole area clickable */;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block; /* Makes the whole area clickable */
 }
 /* Default state, possibly hidden */
 .search-results2 {
     display: none; /* Default to hidden */
-    /* Other styles */;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    /* Other styles */
 }
 
 /* Visible state */
@@ -652,6 +650,8 @@ body.light-mode .dropdown-content2 a {
   margin-right: 2%;
   border-radius: 8px;
   border:2px solid #f8931f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color:white
 
 }
 
@@ -1880,28 +1880,35 @@ left:15px;
     }
 }
 
-
-/* Footer Styles */
-footer {
-    background-color: #333; /* Dark background for the footer */
-    color: white; /* White text color for visibility */
-    padding: 20px 0; /* Padding around the footer content */
-    font-size: 16px; /* Appropriate text size for footer */
-    text-align: center; /* Centers text */
+.image-container {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-top: 50px
 }
 
-.footer-content {
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100%; /* Full height */
-    width: 100%; /* Full width */
+
+
+.description {
+    margin-top: 10px;
+    color: #333;
 }
 
-.footer-section {
-    margin: auto; /* Auto margins for automatic centering in all directions */
+.image-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.image-link:hover {
+    background-color: #0056b3;
 }
 
-.footer-section h4, .footer-section p {
-    margin: 5px 0; /* Small vertical margin for spacing */
+.bodyweb {
+  margin-top: 120px
 }

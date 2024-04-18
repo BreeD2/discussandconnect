@@ -6,6 +6,7 @@
 .active {
   background-color:#f8931f;
   color: white;
+
 }
 
 .topnav .icon {
@@ -296,10 +297,10 @@ left:15px;
 }
 
 .search-results2 div {
-  padding: 8px;
-  border-bottom: 1px solid #f8931f;; /* Light line between results */
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+    padding: 8px;
+    border-bottom: 1px solid #f8931f;; /* Light line between results */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 
 
 }
@@ -311,15 +312,12 @@ left:15px;
 .search-results2 a {
     text-decoration: none;
     color: #333; /* Dark grey text */
-    display: block; /* Makes the whole area clickable */;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block; /* Makes the whole area clickable */
 }
 /* Default state, possibly hidden */
 .search-results2 {
     display: none; /* Default to hidden */
-    /* Other styles */;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    /* Other styles */
 }
 
 /* Visible state */
@@ -652,6 +650,8 @@ body.light-mode .dropdown-content2 a {
   margin-right: 2%;
   border-radius: 8px;
   border:2px solid #f8931f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color:white
 
 }
 
@@ -1880,28 +1880,111 @@ left:15px;
     }
 }
 
-
-/* Footer Styles */
-footer {
-    background-color: #333; /* Dark background for the footer */
-    color: white; /* White text color for visibility */
-    padding: 20px 0; /* Padding around the footer content */
-    font-size: 16px; /* Appropriate text size for footer */
-    text-align: center; /* Centers text */
+.image-container {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-top: 50px
 }
 
-.footer-content {
+
+
+.description {
+    margin-top: 10px;
+    color: #333;
+}
+
+.image-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.image-link:hover {
+    background-color: #0056b3;
+}
+
+.bodyweb {
+  margin-top: 120px
+}
+
+header, section, footer {
+    background-color: white;
+    margin: 10px auto;
+    padding: 20px;
+    width: 80%; /* Responsive width */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds subtle shadow to sections */
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #29abe2; /* Adds a thematic line under the header */
+}
+
+h1 {
+    font-size: 24px;
+    color: #29abe2;
+}
+
+h2 {
+    font-size: 20px;
+    border-bottom: 1px solid #eee; /* Adds a light line under subheadings for separation */
+    padding-bottom: 10px;
+}
+
+p {
+    margin: 10px 0;
+    text-align: justify; /* Justifies text for a cleaner look */
+}
+
+ul {
+    padding-left: 20px; /* Properly indents list */
+}
+
+.team-member {
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100%; /* Full height */
-    width: 100%; /* Full width */
+    align-items: center; /* Aligns the image and text vertically */
+    margin-top: 10px;
 }
 
-.footer-section {
-    margin: auto; /* Auto margins for automatic centering in all directions */
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #eee; /* Adds a border around the image */
 }
 
-.footer-section h4, .footer-section p {
-    margin: 5px 0; /* Small vertical margin for spacing */
+a {
+    color: #29abe2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+}
+
+.image-link, .footer-link {
+    background-color: #29abe2;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.image-link:hover, .footer-link:hover {
+    background-color: #0056b3;
 }
