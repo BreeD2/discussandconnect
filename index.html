@@ -3,10 +3,10 @@
 <html>
  <head>
    <title>Discuss&Connect Documentation</title>
-   <link rel="icon" type="image/x-icon" href="..//favicon.ico"/>
-   <link rel="apple-touch-icon" sizes="76x76" href="..//apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="..//favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="..//favicon-16x16.png">
+   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+   <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
  <link rel="manifest" href="..//site.webmanifest">
  <link rel="mask-icon" href="..//safari-pinned-tab.svg" color="#5bbad5">
  <meta name="msapplication-TileColor" content="#da532c">
@@ -33,13 +33,43 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <body>
-  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
-  <!-- Correctly include Firebase Storage compat layer -->
-  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-storage-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.js"></script>
-  <div class="read-aloud">
-    <div class="topnav" id="myTopnav">
-      <a href="..//index.html" class="logo">
-        <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
+
+
+        <!-- Navigation Bar with Logo and Website Name -->
+        <div class="topnav" id="myTopnav">
+          <a href="..//index.html" class="logo">
+            <img src="discussandconnectlogo.png" alt="Discuss&Connect Logo" style="height: 23px;">&ensp;<span class="title-text">Discuss&Connect</span>
+
+       </a>
+       <!-- User Information Dropdown -->
+       <a href="..//index.html" aria-label="Home"  class="active">Home</a>
+       <a href="..//websites/index.html" aria-label="View my website design projects">Websites</a>
+       <a href="index.html" aria-label="View my poster design projects">Posters</a>
+       <a href="..//videos/index.html" aria-label="View my video projects">Videos</a>
+       <a href="..//books/index.html" aria-label="View my book design projects">Books</a>
+       <a href="..//about/index.html" aria-label="Learn more about me">About</a>
+       <a href="..//contact/index.html" aria-label="Contact me">Contact</a>
+       <a href="..//resume/index.html" aria-label="View my resume">Resume</a>
+
+
+
+
+
+           <!-- Accessibility Button and Dropdown -->
+           <!-- User Information Dropdown -->
+           <input type="text" id="searchInput2" placeholder="Search.." onkeyup="searchFunction()">
+           <button id="clearSearch" onclick="clearSearchFunction()">X</button>
+             <!-- Other navigation items -->
+
+
+
+
+
+           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+             <i class="fa fa-bars"></i>
+           </a>
+
+
+     </div>
+     <!-- Moved searchResults outside the topnav -->
+     <div id="searchResults2" class="search-results2"></div>
