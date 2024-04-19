@@ -151,15 +151,68 @@
       </div>
 
       <!-- Modal to display the enlarged image -->
-          <div id="myModal" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="img01">
-              <div id="caption"></div>
-          </div>
+      <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+          <button id="zoomIn" class="zoom-btn">Zoom In</button>
+          <button id="zoomOut" class="zoom-btn">Zoom Out</button>
+      </div>
 
 
+    <script>
+    // Get the modal element
+    var modal = document.getElementById('myModal');
 
-  </div>
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var imgs = document.querySelectorAll('.image-container img');
+    var modalImg = document.getElementById('img01');
+    var captionText = document.getElementById('caption');
+    var scaleFactor = 1; // Initial scale factor
+
+    imgs.forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+            scaleFactor = 1; // Reset scale factor
+            modalImg.style.transform = 'scale(1)'; // Reset transformation
+        }
+    });
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Get the zoom buttons
+    var zoomInButton = document.getElementById('zoomIn');
+    var zoomOutButton = document.getElementById('zoomOut');
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Function to zoom in
+    zoomInButton.onclick = function() {
+        scaleFactor *= 1.1;  // Increase the scale factor
+        modalImg.style.transform = 'scale(' + scaleFactor + ')';
+    }
+
+    // Function to zoom out
+    zoomOutButton.onclick = function() {
+        scaleFactor *= 0.9;  // Decrease the scale factor
+        modalImg.style.transform = 'scale(' + scaleFactor + ')';
+    }
+
+       </script>
 
 
 
