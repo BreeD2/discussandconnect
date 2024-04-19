@@ -993,7 +993,7 @@ body {
     text-align: center;
     padding: 20px;
     position: relative;
-    background-color: black;
+    background-color: #29abe2;
     margin-top:190px;
       color:white;
   }
@@ -1763,7 +1763,7 @@ section {
 }
 
 footer {
-    background: #333;
+    background: #29abe2;
     color: white;
     padding: 20px;
     text-align: center;
@@ -1883,7 +1883,7 @@ left:15px;
 
 /* Footer Styles */
 footer {
-    background-color: #333; /* Dark background for the footer */
+    background-color: ##29abe2; /* Dark background for the footer */
     color: white; /* White text color for visibility */
     padding: 20px 0; /* Padding around the footer content */
     font-size: 16px; /* Appropriate text size for footer */

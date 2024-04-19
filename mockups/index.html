@@ -73,19 +73,93 @@
      <div id="searchResults2" class="search-results2"></div>
 <div class="bodyweb">
 
-     <div class="image-container">
-            <img src="image1.jpg" alt="Description of image 1">
-            <p class="description">Description of image 1</p>
-            <a href="http://linktoimage1.com" class="image-link">More about image 1</a>
-        </div>
+  <div class="gallery-container">
+    <div class="image-container">
+        <img src="images/icons.jpg" alt="Icons of Discuss&Connect">
+        <p class="description">Discuss&Connect's Icons</p>
 
-        <div class="image-container">
-            <img src="image2.jpg" alt="Description of image 2">
-            <p class="description">Description of image 2</p>
-            <a href="http://linktoimage2.com" class="image-link">More about image 2</a>
-        </div>
+    </div>
+    <div class="image-container">
+        <img src="images/discussandconnectlogo.png" alt="Selected Discuss&Connect's Icon"style="height:30%">
+        <p class="description">Selected Discuss&Connect's Icon</p>
 
-</div>
+    </div>
+      <div class="image-container">
+          <img src="images/original1.jpg" alt="Different Color Schemes of Post Page (1/5)">
+          <p class="description">Different Color Schemes of Post Page (1/5)</p>
+
+      </div>
+
+      <div class="image-container">
+          <img src="images/original2.jpg" alt="Different Color Schemes of Post Page (2/5)">
+          <p class="description">Different Color Schemes of Post Page (2/5)</p>
+
+      </div>
+
+      <div class="image-container">
+          <img src="images/original4.jpg" alt="Different Color Schemes of Post Page (3/5)">
+          <p class="description">Different Color Schemes of Post Page (3/5)</p>
+
+      </div>
+      <div class="image-container">
+          <img src="images/original4.jpeg" alt="Description of image 3">
+          <p class="description">Different Color Schemes of Post Page (4/5)</p>
+
+      </div>
+      <div class="image-container">
+          <img src="images/post.jpg" alt="Post Page">
+          <p class="description">Post Page</p>
+
+      </div>
+      <div class="image-container">
+          <img src="images/discusssettings.jpg" alt="Post Page">
+          <p class="description">Post Page</p>
+
+      </div>
+      <div class="image-container">
+          <img src="images/discussoncomputer.jpg" alt="Description of image 3">
+          <p class="description">Description of image 3</p>
+
+      </div>
+      <div class="image-container">
+          <img src="images/discusswhole.jpg" alt="Description of image 3">
+          <p class="description">Description of image 3</p>
+
+      </div>
+      <div class="image-container">
+          <img src="images/categoryphone.jpg" alt="Description of image 3">
+          <p class="description">Description of image 3</p>
+      </div>
+      <div class="image-container">
+          <img src="images/discussionpost.jpg" alt="Description of image 3">
+          <p class="description">Description of image 3</p>
+
+      </div>
+      <div class="image-container">
+          <img src="images/discussonphone.jpg" alt="Description of image 3">
+          <p class="description">Description of image 3</p>
+
+      </div>
+      <div class="image-container">
+          <img src="images/categoryphone2.jpg" alt="Description of image 3">
+          <p class="description">Description of image 3</p>
+
+      </div>
+      <div class="image-container">
+          <img src="images/category3.jpg" alt="Description of image 3">
+          <p class="description">Description of image 3</p>
+      </div>
+
+      <!-- Modal to display the enlarged image -->
+          <div id="myModal" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01">
+              <div id="caption"></div>
+          </div>
+
+
+
+  </div>
 
 
 
@@ -976,4 +1050,30 @@
            document.getElementById('searchInput2').addEventListener('input', searchFunction);
 
            </script>
+
+           <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.querySelectorAll(".image-container img");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.forEach(function(image) {
+    image.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+</script>
+
 </body>

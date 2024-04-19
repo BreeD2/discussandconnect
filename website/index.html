@@ -72,27 +72,137 @@
      <!-- Moved searchResults outside the topnav -->
      <div id="searchResults2" class="search-results2"></div>
 <div class="bodyweb">
-
+<div class="gallery-container">
      <div class="image-container">
-            <img src="image1.jpg" alt="Description of image 1">
-            <p class="description">Description of image 1</p>
-            <a href="http://linktoimage1.com" class="image-link">More about image 1</a>
+            <img src="images/home1.jpg" alt="Home Page (1/2)">
+            <p class="description">Home Page (1/2)</p>
+            <a href="https://dorman-designs.com/" class="image-link">Home Link</a>
         </div>
 
         <div class="image-container">
-            <img src="image2.jpg" alt="Description of image 2">
-            <p class="description">Description of image 2</p>
-            <a href="http://linktoimage2.com" class="image-link">More about image 2</a>
+            <img src="images/home2.jpg" alt="Home Page (2/2)">
+            <p class="description">Home Page (2/2)</p>
+            <a href="https://dorman-designs.com/" class="image-link">Home Link</a>
+        </div>
+        <div class="image-container">
+            <img src="images/contact.jpg" alt="Contact">
+            <p class="description">Contact</p>
+            <a href="https://dorman-designs.com/contact/" class="image-link">Contact Link</a>
+        </div>
+        <div class="image-container">
+            <img src="images/poll.jpg" alt="Polls">
+            <p class="description">Polls</p>
+            <a href="https://dorman-designs.com/151-2/" class="image-link">Polls Link</a>
+        </div>
+        <div class="image-container">
+            <img src="images/about.jpg" alt="About">
+            <p class="description">About</p>
+            <a href="https://dorman-designs.com/about/" class="image-link">About Link</a>
+        </div>
+        <div class="image-container">
+            <img src="images/abio.jpg" alt="Author's Biography">
+            <p class="description">Author's Biography</p>
+            <a href="https://dorman-designs.com/about/sub-page-1/" class="image-link">Author's Biography Link</a>
+        </div>
+        <div class="image-container">
+            <img src="images/privacypolicy.jpg" alt="Privacy Policy">
+            <p class="description">Privacy Policy</p>
+            <a href="https://dorman-designs.com/about/privacy-policy/" class="image-link">Privacy Policy Link</a>
+        </div>
+        <div class="image-container">
+            <img src="images/faq.jpg" alt="FAQ">
+            <p class="description">FAQ</p>
+            <a href="https://dorman-designs.com/about/sub-page-2/m" class="image-link">FAQ Link</a>
         </div>
 
+        <div class="image-container">
+            <img src="images/postpage.jpg" alt="Post page">
+            <p class="description">Post Page</p>
+            <a href="https://dorman-designs.com/category/restaurants/" class="image-link">Post Page Link</a>
+        </div>
+        <div class="image-container">
+            <img src="images/askaquestion.jpg" alt="Ask a question">
+            <p class="description">Ask a Question</p>
+            <a href="https://dorman-designs.com/?ptype=ask-a-question" class="image-link">Ask a Question Link</a>
+        </div>
+
+        <div class="image-container">
+            <img src="images/forgot.jpg" alt="Forgot">
+            <p class="description">Forgot</p>
+            <a href="https://dorman-designs.com/?ptype=login&page1=sign_in&emsg=fw" class="image-link">Forgot Password Link</a>
+        </div>
+        <div class="image-container">
+            <img src="images/signup.jpg" alt="Signup">
+            <p class="description">Signup</p>
+            <a href="https://dorman-designs.com/?ptype=login&page1=sign_up" class="image-link">Signup Link</a>
+        </div>
+
+
 </div>
+  </div>
+
+  <!-- Modal to display the enlarged image -->
+  <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+      <button id="zoomIn" class="zoom-btn">Zoom In</button>
+      <button id="zoomOut" class="zoom-btn">Zoom Out</button>
+  </div>
 
 
+<script>
+// Get the modal element
+var modal = document.getElementById('myModal');
 
-     <script>
-     document.querySelector('.menu-toggle').addEventListener('click', function() {
-       this.classList.toggle('active');
-   });
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgs = document.querySelectorAll('.image-container img');
+var modalImg = document.getElementById('img01');
+var captionText = document.getElementById('caption');
+var scaleFactor = 1; // Initial scale factor
+
+imgs.forEach(img => {
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+        captionText.innerHTML = this.alt;
+        scaleFactor = 1; // Reset scale factor
+        modalImg.style.transform = 'scale(1)'; // Reset transformation
+    }
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Get the zoom buttons
+var zoomInButton = document.getElementById('zoomIn');
+var zoomOutButton = document.getElementById('zoomOut');
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Function to zoom in
+zoomInButton.onclick = function() {
+    scaleFactor *= 1.1;  // Increase the scale factor
+    modalImg.style.transform = 'scale(' + scaleFactor + ')';
+}
+
+// Function to zoom out
+zoomOutButton.onclick = function() {
+    scaleFactor *= 0.9;  // Decrease the scale factor
+    modalImg.style.transform = 'scale(' + scaleFactor + ')';
+}
+
    </script>
 
 
@@ -976,4 +1086,29 @@
            document.getElementById('searchInput2').addEventListener('input', searchFunction);
 
            </script>
+
+           <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.querySelectorAll(".image-container img");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.forEach(function(image) {
+    image.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+</script>
 </body>
