@@ -1883,7 +1883,7 @@ left:15px;
 
 /* Footer Styles */
 footer {
-    background-color: ##29abe2; /* Dark background for the footer */
+    background-color: #29abe2; /* Dark background for the footer */
     color: white; /* White text color for visibility */
     padding: 20px 0; /* Padding around the footer content */
     font-size: 16px; /* Appropriate text size for footer */
@@ -1904,4 +1904,35 @@ footer {
 
 .footer-section h4, .footer-section p {
     margin: 5px 0; /* Small vertical margin for spacing */
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 5px solid #f8931f;
+    text-align: center;
+    margin-top: 80px;
+
+}
+
+h1 {
+    color: #f8931f;
+    margin: 0 0 20px;
+}
+
+body > center > header > p{
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #29abe2;
+    line-height: 22px;
+    text-align: center
+}
+
+body > center > header > p:nth-child(2) {
+    margin-top: 40px;
+}
+
+body > center > header > p:nth-child(4) {
+    margin-bottom: 40px;
 }

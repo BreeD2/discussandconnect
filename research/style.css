@@ -1912,3 +1912,37 @@ left:15px;
 .bodyweb {
   margin-top: 120px
 }
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    margin-bottom: 40px;
+}
+
+article img {
+    width: 100%; /* Responsive image width */
+    max-width: 600px; /* Limiting the size to maintain aesthetics */
+    height: auto;
+    border-radius: 8px;
+}
+
+article a {
+    color: #0077b6; /* A bright, inviting blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+</div>

@@ -1913,7 +1913,7 @@ left:15px;
   margin-top: 120px
 }
 
-header, section, footer {
+header, section {
     background-color: white;
     margin: 10px auto;
     padding: 20px;
@@ -1934,7 +1934,7 @@ h1 {
 
 h2 {
     font-size: 20px;
-    border-bottom: 1px solid #eee; /* Adds a light line under subheadings for separation */
+    border-bottom: 1px solid #29abe2; /* Adds a light line under subheadings for separation */
     padding-bottom: 10px;
 }
 
@@ -1987,4 +1987,47 @@ footer {
 
 .image-link:hover, .footer-link:hover {
     background-color: #0056b3;
+}
+
+h2 {
+  color:#29abe2;
+}
+
+p {
+    color:#29abe2;
+}
+
+h1 {
+  color:#f8931f;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #29abe2; /* Dark background for the footer */
+    color: white; /* White text color for visibility */
+    padding: 20px 0; /* Padding around the footer content */
+    font-size: 16px; /* Appropriate text size for footer */
+    text-align: center; /* Centers text */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+}
+
+.footer-section {
+    margin: auto; /* Auto margins for automatic centering in all directions */
+}
+
+.footer-section h4, .footer-section p {
+    margin: 5px 0; /* Small vertical margin for spacing */
+    color:white
+}
+
+body > center > div.bodyweb > section:nth-child(5) {
+  margin-bottom: 60px
 }
