@@ -18,6 +18,7 @@
 .topnav a:hover {
   background-color: #555;
   color: white;
+  text-decoration: none;
 }
 
 /* Show the dropdown menu when the user moves the mouse over the dropdown button */

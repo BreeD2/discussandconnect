@@ -74,18 +74,7 @@
   color:white
 }
 
-/* Style the dropdown button to fit inside the topnav */
-.dropdown2 .dropbtn2 {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-  display: block
-}
+
 
 /* Style the dropdown content (hidden by default) */
 .dropdown-content2 {
@@ -163,17 +152,7 @@
   color:white
 }
 
-/* Style the dropdown button to fit inside the topnav */
-.dropdown2 .dropbtn2 {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
+
 
 /* Style the dropdown content (hidden by default) */
 .dropdown-content2 {
@@ -1240,16 +1219,7 @@ body.dark-mode .next {
   margin: 10px 0 5px;
 }
 
-.game-info {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    font-style: normal;
-}
+
 
 p {
   font-style: normal;
@@ -1436,20 +1406,7 @@ p {
 }
 
 
-.accessibility-button {
-  cursor: pointer;
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: arial;
-  margin: 0;
-  position: sticky;
-  top:0px;
 
-}
 
 
 /* Styles for hover state */
@@ -1728,7 +1685,7 @@ color:black;
 body, h1, h2, p {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+      font-family: Helvetica;
 }
 
 header {

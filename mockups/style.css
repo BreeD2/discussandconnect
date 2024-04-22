@@ -74,19 +74,6 @@
   color:white
 }
 
-/* Style the dropdown button to fit inside the topnav */
-.dropdown2 .dropbtn2 {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-  display: block
-}
-
 /* Style the dropdown content (hidden by default) */
 .dropdown-content2 {
   display: none;
@@ -771,7 +758,7 @@ body {
   body {
     background-color: white;
     color: #000;
-    font-family: helvetica;
+    font-family: Helvetica;
   }
 
 
@@ -1247,7 +1234,7 @@ body.dark-mode .next {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+    font-family: Helvetica;
     font-style: normal;
 }
 
@@ -1436,20 +1423,7 @@ p {
 }
 
 
-.accessibility-button {
-  cursor: pointer;
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: arial;
-  margin: 0;
-  position: sticky;
-  top:0px;
 
-}
 
 
 /* Styles for hover state */
@@ -1728,7 +1702,7 @@ color:black;
 body, h1, h2, p {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Helvetica;
 }
 
 header {
@@ -2060,9 +2034,10 @@ border-radius: 5px;
 
 
 
+
 /* Footer Styles */
 footer {
-    background-color: ##29abe2; /* Dark background for the footer */
+    background-color: #29abe2; /* Dark background for the footer */
     color: white; /* White text color for visibility */
     padding: 20px 0; /* Padding around the footer content */
     font-size: 16px; /* Appropriate text size for footer */
