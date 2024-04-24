@@ -2059,3 +2059,23 @@ footer {
 .footer-section h4, .footer-section p {
     margin: 5px 0; /* Small vertical margin for spacing */
 }
+
+#caption {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 700px;
+  height: 50px;
+  color: white;
+  background-color: #f8931f;
+  box-sizing: border-box;
+  padding: 10px 0;
+
+}
+
+
+body > center > div.bodyweb > div > div > p {
+  color:#f8931f
+}

@@ -1255,21 +1255,27 @@ p {
   max-width: 700px;
 }
 
-/* Caption of Modal Image */
+
+
 #caption {
   margin: auto;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 80%;
   max-width: 700px;
-  text-align: center;
-  color: #ccc;
+  height: 50px;
+  color: white;
+  background-color: #f8931f;
+  box-sizing: border-box;
   padding: 10px 0;
-  height: 150px;
+
 }
 
 
-
-
+body > center > div.bodyweb > div > div > p {
+  color:#f8931f
+}
 
 
 
@@ -1957,7 +1963,7 @@ width:100%
 #zoomIn {
   right: 0px; /* Adjust based on your layout */;
   z-index:2;
-  top:400px;
+
   position: sticky;
     font-size: 15px;
     background-color:
