@@ -1887,6 +1887,90 @@ left:15px;
   margin-top: 120px
 }
 
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+article {
+    margin-bottom: 40px;
+}
+
+
+
+article a {
+    color: #0077b6; /* A bright, inviting blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #29abe2; /* Dark background for the footer */
+    color: white; /* White text color for visibility */
+    padding: 20px 0; /* Padding around the footer content */
+    font-size: 16px; /* Appropriate text size for footer */
+    text-align: center; /* Centers text */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+}
+
+.footer-section {
+    margin: auto; /* Auto margins for automatic centering in all directions */
+}
+
+.footer-section h4, .footer-section p {
+    margin: 5px 0; /* Small vertical margin for spacing */
+}
+
+.image-container {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-top: 50px
+}
+
+
+
+.description {
+    margin-top: 10px;
+    color: #333;
+}
+
+.image-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.image-link:hover {
+    background-color: #0056b3;
+}
+
+.bodyweb {
+  margin-top: 120px
+}
+
 body > center > div.bodyweb > div> img {
 width:100%
 }
@@ -1908,9 +1992,14 @@ width:100%
 }
 
 .image-container img {
-    width: 100%; /* Makes the image responsive */
-    height: auto; /* Maintains the aspect ratio */
+    width: 50%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+
+
 }
+
+
 
 .description {
     margin: 10px 0;
@@ -2093,5 +2182,90 @@ body > center > div.bodyweb > div > div > p {
 }
 
 body > center > div.bodyweb > div.gallery-container > div > h5 {
-  color:#29abe2
+  background-color:#29abe2;
+  color:white
+}
+
+
+
+body > center > div.bodyweb > div.gallery-container > div > p {
+  background-color:#29abe2;
+  color:white
+}
+
+body > center > div.bodyweb > div.gallery-container > div > a {
+  background-color:#29abe2;
+  color:white;
+  width:auto
+}
+
+body > center > div.bodyweb > div.gallery-container > div > h2 {
+background-color:#f8931f;
+color:white;
+font-size: 24px;
+margin: 0px;
+}
+
+/* Common styles for image containers */
+.image-container {
+    width: 300px;
+    margin: 20px;
+    padding: 0px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Styling for image links */
+.image-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hover effect for image links */
+.image-link:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 700px) {
+    .image-container img {
+        max-width: 100%; /* Adjusts image width for smaller screens */
+    }
+}
+
+/* Common styles for image containers */
+.image-container {
+    width: 300px;
+    margin: 20px;
+    padding: 0px;
+    border: 1px solid #ccc;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+}
+
+/* Style for the paragraph inside image containers */
+.image-container p {
+    margin-top: auto; /* Pushes the paragraph to the bottom */
+}
+
+/* Styling for image links */
+.image-link {
+    display: inline-block;
+    margin-top: 10px;
+
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hover effect for image links */
+.image-link:hover {
+    background-color: #0056b3;
 }

@@ -71,61 +71,82 @@
      </div>
      <!-- Moved searchResults outside the topnav -->
      <div id="searchResults2" class="search-results2"></div>
-<div class="bodyweb">
-  <section>
-              <h2>Typefaces</h2>
-              <article>
-                  <h3>Ruddy</h3>
+     <div class="bodyweb">
+
+       <div class="gallery-container">
+         <div class="image-container">
+           <h2>Shopify</h2>
+           <img src="shopify.jpg" alt="A picture of website: Shopify">
+           <p>Shopify</br>
+           <a href="https://community.shopify.com/c/shopify-discussion/ct-p/shopify-discussion">The link to website: Shopify</a></p>
+             </div>
+             <div class="image-container">
+               <h2>Website Inspiration: Pipefy</h2>
+               <img src="pipefy.jpg" alt="A picture of website: Pipefy">
+               <p>Typeform</br>
+               <a href="https://community.pipefy.com/discussions-42">The link to Pipefy</a></p>
+                 </div>
+                 <div class="image-container">
+                   <h2>Website Inspiration: Bettermode</h2>
+                   <img src="bettermode.jpg" alt="A picture of website: Bettermode">
+                   <p>Bettermode</br>
+                   <a href="https://bettermode.com/hub/">The link to Bettermode</a></p>
+                     </div>
+         <div class="image-container">
+           <h2>Website Inspiration: Typeform</h2>
+           <img src="typeform.jpg" alt="A picture of website: Typeform">
+           <p>Typeform</br>
+           <a href="https://community.typeform.com/">The link to website: Typeform</a></p>
+             </div>
+         <div class="image-container">
+
+                  <h2>Ruddy</h2>
                   <img src="ruddy.jpg" alt="Ruddy typeface">
-                  <p>The typeface: Ruddy</p>
-                  <a href="https://fonts.adobe.com/fonts/ruddy">Information About Ruddy</a>
-              </article>
-              <article>
-                  <h3>Helvetica</h3>
+                  <p>The typeface: Ruddy<br>
+                  <a href="https://fonts.adobe.com/fonts/ruddy">Information About Ruddy</a></p>
+                </div>
+             <div class="image-container">
+                  <h2>Helvetica</h2>
                   <img src="helvetica.jpg" alt="Helvetica typeface">
-                  <p>The typeface: Helvetica</p>
-                  <a href="https://www.designandpaper.com/the-story-of-the-worlds-most-famous-font-helvetica/">The History of Helvetica</a>
-              </article>
-            </section><br>
-              <section>
-              <h2>Main Color Scheme</h2>
-              <article>
-                  <h3>#29abe2</h3>
+                  <p>The typeface: Helvetica</br>
+                  <a href="https://www.designandpaper.com/the-story-of-the-worlds-most-famous-font-helvetica/">The History of Helvetica</a></p>
+              </div>
+             <div class="image-container">
+
+
+                  <h2>Color Scheme #29abe2 (2/3)</h2>
                   <img src="blue.jpg" alt="A square with the HEX code: #29abe2">
                   <p>The color: #29abe2</p>
 
-              </article>
-              <article>
-                  <h3>#f8931f</h3>
+            </div>
+           <div class="image-container">
+                  <h2>Color Scheme #f8931f (2/3)</h2>
                   <img src="orange.jpg" alt="A square with the HEX code: #f8931f">
                   <p>The color: #f8931f</p>
-
-              </article>
-              <article>
-                  <h3>#ffffff</h3>
+              </div>
+             <div class="image-container">
+                  <h2>Color Scheme #ffffff (3/3)</h2>
                   <img src="white.jpg" alt="A square with the HEX code: #ffffff">
                   <p>The color: #ffffff</p>
 
-              </article>
-          </section><br>
-          <section>
-          <h2>Map</h2>
-          <article>
+              </div>
+         <div class="image-container">
+          <h2>Sitemap Map (Mockups)</h2>
 
-              <img src="sitemap1.jpg" alt="Sitemap of Mockups ">
+
+              <img src="sitemap1.jpg" alt="Sitemap of the Mockups" style="width:100%">
                 <p>The Sitemap of Discuss&Connect: Where Communities Unite original mockup.</p>
 
-          </article>
-          <article>
-
-              <img src="sitemap2.jpg" alt="Sitemap of Wordpress"style="width:100%">
+          </div>
+           <div class="image-container">
+<h2>Sitemap Map (Website)</h2>
+              <img src="sitemap2.jpg" alt="Sitemap of the Website"style="width:100%">
                 <p>The Sitemap of the Discuss&Connect: Where Communities Unite website which have where each page leads to.</p>
 
-          </article>
-      </section>
-<br>
-</div>
+      </div>
 
+</div>
+</br>
 <footer>
     <div class="footer-content">
         <div class="footer-section">
@@ -137,6 +158,73 @@
         </div>
     </div>
 </footer>
+
+
+
+      <!-- Modal to display the enlarged image -->
+      <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+          <button id="zoomIn" class="zoom-btn">Zoom In</button>
+          <button id="zoomOut" class="zoom-btn">Zoom Out</button>
+      </div>
+
+
+    <script>
+    // Get the modal element
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var imgs = document.querySelectorAll('.image-container img');
+    var modalImg = document.getElementById('img01');
+    var captionText = document.getElementById('caption');
+    var scaleFactor = 1; // Initial scale factor
+
+    imgs.forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+            scaleFactor = 1; // Reset scale factor
+            modalImg.style.transform = 'scale(1)'; // Reset transformation
+        }
+    });
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Get the zoom buttons
+    var zoomInButton = document.getElementById('zoomIn');
+    var zoomOutButton = document.getElementById('zoomOut');
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Function to zoom in
+    zoomInButton.onclick = function() {
+        scaleFactor *= 1.1;  // Increase the scale factor
+        modalImg.style.transform = 'scale(' + scaleFactor + ')';
+    }
+
+    // Function to zoom out
+    zoomOutButton.onclick = function() {
+        scaleFactor *= 0.9;  // Decrease the scale factor
+        modalImg.style.transform = 'scale(' + scaleFactor + ')';
+    }
+
+       </script>
+
 
      <script>
      document.querySelector('.menu-toggle').addEventListener('click', function() {
