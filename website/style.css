@@ -2183,7 +2183,7 @@ body > center > div.bodyweb > div.gallery-container > div > p {
 }
 
 body > center > div.bodyweb > div.gallery-container > div > a {
-  background-color:#29abe2;
+  background-color:#f8931f;
   color:white;
   width:auto
 }
@@ -2257,4 +2257,8 @@ margin: 0px;
 /* Hover effect for image links */
 .image-link:hover {
     background-color: #0056b3;
+}
+
+body > center > div.bodyweb > div.gallery-container > div > a:hover {
+  text-decoration: underline
 }
