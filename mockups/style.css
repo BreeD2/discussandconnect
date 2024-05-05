@@ -26,7 +26,7 @@
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1060px) {
   .topnav a:not(:first-child),
   .dropdown .dropbtn, .dropdown2 {
     display: none;
@@ -38,7 +38,7 @@
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1060px) {
   }
   .topnav.responsive a.icon {
     position: absolute;
@@ -108,7 +108,7 @@
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1060px) {
   .topnav a:not(:first-child), .dropdown .dropbtn2 {
     display: none;
   }
@@ -119,7 +119,7 @@
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1060px) {
 
   .topnav.responsive a.icon {
     position: absolute;
@@ -1992,9 +1992,20 @@ width:100%
 }
 
 .image-container img {
-    width: 50%; /* Makes the image responsive */
-    height: auto; /* Maintains the aspect ratio */;
+    width: 100%; /* Makes the image responsive */
+    height: 100%; /* Maintains the aspect ratio */;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+body > center > div.bodyweb > div.gallery-container > div:nth-child(2) > div {
+  height:100%;
+  max-width: 400px;
+  padding: 10px
+}
+
+body > center > div.bodyweb > div.gallery-container > div:nth-child(2) > div > img {
 
 
 }
@@ -2188,8 +2199,9 @@ body > center > div.bodyweb > div.gallery-container > div > h5 {
 
 
 
-body > center > div.bodyweb > div.gallery-container > div > p {
-  background-color:#29abe2;
+body > center > div.bodyweb > div.gallery-container > div> p{
+  background-color:#83969f;
+  padding: 10px;
   color:white
 }
 
@@ -2200,10 +2212,16 @@ body > center > div.bodyweb > div.gallery-container > div > a {
 }
 
 body > center > div.bodyweb > div.gallery-container > div > h2 {
-background-color:#f8931f;
+background-color:#a29a91;
 color:white;
 font-size: 24px;
 margin: 0px;
+padding: 10px;
+}
+
+body > center > div.bodyweb > div.gallery-container > div > p.description {
+  background:none;
+
 }
 
 /* Common styles for image containers */
@@ -2235,6 +2253,12 @@ margin: 0px;
 @media screen and (max-width: 700px) {
     .image-container img {
         max-width: 100%; /* Adjusts image width for smaller screens */
+    }
+    body > center > div.bodyweb > div.gallery-container > div:nth-child(2) > div > img {
+      height:100px
+    }
+    body > center > div.bodyweb > div.gallery-container > div:nth-child(2) > div {
+        height:500px
     }
 }
 
@@ -2268,4 +2292,8 @@ margin: 0px;
 /* Hover effect for image links */
 .image-link:hover {
     background-color: #0056b3;
+}
+
+.resize {
+  width:100%
 }
