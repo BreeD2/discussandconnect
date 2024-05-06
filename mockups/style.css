@@ -2198,25 +2198,26 @@ body > center > div.bodyweb > div.gallery-container > div > h5 {
 }
 
 
-
 body > center > div.bodyweb > div.gallery-container > div> p{
-  background-color:#83969f;
+  background-color:#688a9b;
   padding: 10px;
   color:white
 }
 
 body > center > div.bodyweb > div.gallery-container > div > a {
-  background-color:#29abe2;
+  background-color:#4a6a7a;
   color:white;
-  width:auto
+  width:auto;
+  margin: 0px
 }
 
 body > center > div.bodyweb > div.gallery-container > div > h2 {
-background-color:#a29a91;
+background-color:#aba195;
 color:white;
 font-size: 24px;
 margin: 0px;
 padding: 10px;
+font-size: 20px;
 }
 
 body > center > div.bodyweb > div.gallery-container > div > p.description {
@@ -2296,4 +2297,8 @@ body > center > div.bodyweb > div.gallery-container > div > p.description {
 
 .resize {
   width:100%
+}
+
+#myTopnav > a.icon {
+  color:#f8931f;
 }
